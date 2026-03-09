@@ -33,7 +33,7 @@ color:white;
 .hero{
 
 height:100vh;
-background:url("Background1.jpg") center center no-repeat;
+background:url("jarvis.gif") center center no-repeat;
 background-size:cover;
 
 display:flex;
@@ -44,7 +44,7 @@ position:relative;
 
 }
 
-/* dark overlay */
+/* overlay */
 
 .hero::after{
 
@@ -54,7 +54,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.35);
 
 }
 
@@ -67,43 +67,45 @@ z-index:2;
 
 }
 
-/* top heading */
+/* top white heading */
 
 .jarvis-title{
 
 font-family:'Orbitron',sans-serif;
-font-size:55px;
+
+font-size:60px;
+
 letter-spacing:4px;
+
 color:white;
 
 text-shadow:
-0 0 5px rgba(255,255,255,0.6),
-0 0 10px rgba(255,255,255,0.4);
+0 0 5px rgba(255,255,255,0.9),
+0 0 12px rgba(255,255,255,0.6);
 
-margin-bottom:20px;
+margin-bottom:15px;
 
 }
 
-/* name */
+/* glowing name */
 
 .jarvis-name{
 
 font-family:'Orbitron',sans-serif;
 
-font-size:85px;
+font-size:90px;
 
-font-weight:800;
-
-color:#00c8ff;
+font-weight:700;
 
 letter-spacing:6px;
 
-text-shadow:
+color:#00c8ff;
 
+text-shadow:
 0 0 5px #00c8ff,
 0 0 15px #00c8ff,
-0 0 25px #00c8ff,
-0 0 40px rgba(0,200,255,0.8);
+0 0 30px #00c8ff,
+0 0 50px rgba(0,200,255,0.9);
 
 }
 
@@ -112,9 +114,14 @@ text-shadow:
 .scroll{
 
 position:absolute;
+
 bottom:40px;
+
 font-size:18px;
+
 opacity:0.8;
+
+z-index:2;
 
 }
 
@@ -136,7 +143,7 @@ padding:80px;
 
 }
 
-/* personal container */
+/* container */
 
 .personal-container{
 
@@ -154,15 +161,13 @@ width:100%;
 
 }
 
-/* info section */
+/* info */
 
 .personal-info{
 
 flex:1;
 
 }
-
-/* heading */
 
 .personal-info h2{
 
@@ -173,8 +178,6 @@ margin-bottom:30px;
 color:#38bdf8;
 
 }
-
-/* info text */
 
 .personal-info p{
 
@@ -196,11 +199,11 @@ text-align:center;
 
 .personal-image img{
 
-width:320px;
+width:330px;
 
 border-radius:20px;
 
-box-shadow:0 0 30px rgba(0,200,255,0.4);
+box-shadow:0 0 40px rgba(0,200,255,0.5);
 
 }
 
@@ -240,46 +243,35 @@ transform:scale(1.05);
 
 </head>
 
-
 <body>
 
-
-<!-- HERO SECTION -->
+<!-- HERO PAGE -->
 
 <section class="hero">
 
 <div class="hero-content">
 
 <h1 class="jarvis-title">
-
 HELLO JARVIS, LET'S STUDY ABOUT
-
 </h1>
 
 <h2 class="jarvis-name">
-
 ARAV RAKHASIA
-
 </h2>
 
 </div>
 
 <div class="scroll">
-
 Scroll ↓
-
 </div>
 
 </section>
 
-
-<!-- PERSONAL SECTION -->
+<!-- PERSONAL PAGE -->
 
 <section class="personal">
 
 <div class="personal-container">
-
-<!-- LEFT SIDE INFO -->
 
 <div class="personal-info">
 
@@ -309,20 +301,15 @@ Connect on LinkedIn
 
 </div>
 
-
-<!-- RIGHT SIDE IMAGE -->
-
 <div class="personal-image">
 
 <img src="ARImage.jpeg">
 
 </div>
 
-
 </div>
 
 </section>
-
 
 </body>
 
