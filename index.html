@@ -12,8 +12,6 @@
 
 <style>
 
-/* GLOBAL */
-
 *{
 margin:0;
 padding:0;
@@ -28,199 +26,245 @@ body{
 font-family:'Poppins',sans-serif;
 background:black;
 color:white;
-overflow-x:hidden;
-}
-
-/* LINKEDIN BUTTON */
-
-.linkedin{
-position:fixed;
-top:25px;
-right:30px;
-background:#0ea5e9;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-color:white;
-font-weight:600;
-z-index:10;
-transition:0.3s;
-}
-
-.linkedin:hover{
-background:#0284c7;
-transform:scale(1.05);
 }
 
 /* HERO SECTION */
 
 .hero{
+
 height:100vh;
-background-image:url("jarvis.gif");
+background:url("Background1.jpg") center center no-repeat;
 background-size:cover;
-background-position:center;
+
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 position:relative;
+
 }
 
-/* Dark overlay */
+/* dark overlay */
 
 .hero::after{
+
 content:"";
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.65);
+background:rgba(0,0,0,0.6);
+
 }
 
-/* Hero content */
+/* hero content */
 
 .hero-content{
+
 position:relative;
 z-index:2;
-}
-
-/* Text animation */
-
-.jarvis-text{
-opacity:0;
-animation:fadeIn 3s ease forwards;
-animation-delay:3s;
-}
-
-@keyframes fadeIn{
-
-0%{
-opacity:0;
-transform:translateY(40px);
-}
-
-100%{
-opacity:1;
-transform:translateY(0);
-}
 
 }
 
-/* Heading */
+/* top heading */
 
-.hero h1{
+.jarvis-title{
+
 font-family:'Orbitron',sans-serif;
-font-size:48px;
-letter-spacing:3px;
-margin-bottom:15px;
+font-size:55px;
+letter-spacing:4px;
+color:white;
+
+text-shadow:
+0 0 5px rgba(255,255,255,0.6),
+0 0 10px rgba(255,255,255,0.4);
+
+margin-bottom:20px;
+
 }
 
-.hero h2{
+/* name */
+
+.jarvis-name{
+
 font-family:'Orbitron',sans-serif;
-font-size:75px;
-color:#00e5ff;
+
+font-size:85px;
+
 font-weight:800;
-text-shadow:0 0 25px #00e5ff;
-letter-spacing:5px;
+
+color:#00c8ff;
+
+letter-spacing:6px;
+
+text-shadow:
+
+0 0 5px #00c8ff,
+0 0 15px #00c8ff,
+0 0 25px #00c8ff,
+0 0 40px rgba(0,200,255,0.8);
+
 }
 
-/* Scroll indicator */
+/* scroll indicator */
 
-.scroll-indicator{
+.scroll{
+
 position:absolute;
 bottom:40px;
 font-size:18px;
 opacity:0.8;
-animation:bounce 2s infinite;
-z-index:2;
-}
-
-@keyframes bounce{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-10px);
-}
 
 }
 
 /* PERSONAL SECTION */
 
 .personal{
+
 min-height:100vh;
+
 background:#020617;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
-padding:80px 20px;
+
+padding:80px;
+
 }
 
-.personal-card{
+/* personal container */
 
-background:#0f172a;
-padding:60px;
-border-radius:20px;
-box-shadow:0 0 40px rgba(0,229,255,0.2);
-max-width:800px;
+.personal-container{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:60px;
+
+max-width:1100px;
+
 width:100%;
-text-align:left;
 
 }
 
-/* Personal heading */
+/* info section */
 
-.personal h2{
+.personal-info{
+
+flex:1;
+
+}
+
+/* heading */
+
+.personal-info h2{
+
 font-size:45px;
+
 margin-bottom:30px;
+
 color:#38bdf8;
+
 }
 
-/* Personal info */
+/* info text */
 
-.info{
+.personal-info p{
 
 font-size:22px;
+
 line-height:2;
 
 }
 
-.info strong{
-color:#38bdf8;
+/* image */
+
+.personal-image{
+
+flex:1;
+
+text-align:center;
+
+}
+
+.personal-image img{
+
+width:320px;
+
+border-radius:20px;
+
+box-shadow:0 0 30px rgba(0,200,255,0.4);
+
+}
+
+/* linkedin button */
+
+.linkedin{
+
+display:inline-block;
+
+margin-top:30px;
+
+background:#0ea5e9;
+
+padding:12px 25px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+.linkedin:hover{
+
+background:#0284c7;
+
+transform:scale(1.05);
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<!-- LINKEDIN BUTTON -->
-
-<a class="linkedin"
-href="https://www.linkedin.com/in/arav-rakhasia-70186232a/"
-target="_blank">
-
-Connect on LinkedIn
-
-</a>
 
 <!-- HERO SECTION -->
 
 <section class="hero">
 
-<div class="hero-content jarvis-text">
+<div class="hero-content">
 
-<h1>HELLO JARVIS, LET'S STUDY ABOUT</h1>
+<h1 class="jarvis-title">
 
-<h2>ARAV RAKHASIA</h2>
+HELLO JARVIS, LET'S STUDY ABOUT
+
+</h1>
+
+<h2 class="jarvis-name">
+
+ARAV RAKHASIA
+
+</h2>
 
 </div>
 
-<div class="scroll-indicator">
+<div class="scroll">
 
 Scroll ↓
 
@@ -233,11 +277,15 @@ Scroll ↓
 
 <section class="personal">
 
-<div class="personal-card">
+<div class="personal-container">
+
+<!-- LEFT SIDE INFO -->
+
+<div class="personal-info">
 
 <h2>Personal Information</h2>
 
-<div class="info">
+<p>
 
 <strong>Name:</strong> Arav Rakhasia<br>
 
@@ -247,13 +295,34 @@ Scroll ↓
 
 <strong>Degree:</strong> MBA Tech – Artificial Intelligence<br>
 
-<strong>Location:</strong> Mumbai, India
+<strong>Location:</strong> MUMBAI
+
+</p>
+
+<a class="linkedin"
+href="https://www.linkedin.com/in/arav-rakhasia-70186232a/"
+target="_blank">
+
+Connect on LinkedIn
+
+</a>
 
 </div>
+
+
+<!-- RIGHT SIDE IMAGE -->
+
+<div class="personal-image">
+
+<img src="ARImage.jpeg">
+
+</div>
+
 
 </div>
 
 </section>
+
 
 </body>
 
