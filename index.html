@@ -1,57 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arav Rakhasia | AI Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-font-family: Arial;
-background:#0f172a;
+background:#000;
 color:white;
+overflow-x:hidden;
+}
+
+section{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:50px;
+padding:40px;
 }
 
-h1{
-font-size:50px;
+/* HERO SECTION */
+
+.hero{
+background:linear-gradient(120deg,#000,#0f172a,#020617);
 }
 
-p{
-font-size:20px;
+.hero h1{
+font-size:70px;
+font-weight:600;
+margin-bottom:20px;
 }
 
-.container{
-max-width:800px;
-margin:auto;
+.hero p{
+font-size:22px;
+opacity:0.8;
 }
 
-.btn{
-background:#38bdf8;
-padding:12px 25px;
-color:black;
+.details{
+margin-top:20px;
+font-size:18px;
+opacity:0.8;
+}
+
+.linkedin{
+margin-top:30px;
+padding:14px 28px;
+background:#0ea5e9;
+color:white;
 text-decoration:none;
-border-radius:8px;
-font-weight:bold;
+border-radius:30px;
+font-size:18px;
+transition:0.3s;
 }
+
+.linkedin:hover{
+background:#0284c7;
+transform:scale(1.05);
+}
+
+/* SCROLL SECTION */
+
+.scroll-section{
+background:#020617;
+}
+
+.scroll-section h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.scroll-section p{
+max-width:700px;
+font-size:20px;
+opacity:0.8;
+}
+
+/* WORK SECTION */
+
+.work{
+background:#000;
+}
+
+.work h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.work p{
+font-size:22px;
+opacity:0.7;
+}
+
+/* SMOOTH FADE */
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
 </style>
 </head>
 
+
 <body>
 
-<div class="container">
+<!-- HERO -->
+
+<section class="hero">
 
 <h1>Arav Rakhasia</h1>
 
-<p>MBA Tech Artificial Intelligence Student</p>
+<p>MBA Tech – Artificial Intelligence</p>
 
-<p>Machine Learning • Deep Learning • AI Solutions</p>
-
-<p>Email: arav.rakhasia2005@gmail.com</p>
-
-<br>
-
-<a class="btn" href="https://linkedin.com">Connect on LinkedIn</a>
-
+<div class="details">
+Mumbai, India<br>
+arav.rakhasia2005@gmail.com
 </div>
+
+<a class="linkedin"
+href="https://www.linkedin.com/in/arav-rakhasia-70186232a/"
+target="_blank">
+
+Connect on LinkedIn
+
+</a>
+
+</section>
+
+
+<!-- INTRO SCROLL -->
+
+<section class="scroll-section fade">
+
+<h2>Building AI Solutions</h2>
+
+<p>
+AI Student passionate about Machine Learning, Deep Learning,
+and solving real-world problems with intelligent systems.
+</p>
+
+</section>
+
+
+<!-- WORK SECTION -->
+
+<section class="work fade">
+
+<h2>My Work</h2>
+
+<p>
+Scroll further to explore my projects, research and hackathon work.
+</p>
+
+</section>
+
+
+
+<script>
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+});
+
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+
+</script>
+
 
 </body>
 </html>
